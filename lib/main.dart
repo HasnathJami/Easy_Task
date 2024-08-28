@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
 
                     final box = Boxes.getData();
                     box.add(data);
-                    // data.save();
+
                     titleController.clear();
                     descriptionController.clear();
 
@@ -191,8 +191,7 @@ class _HomeState extends State<Home> {
                   onPressed: () async {
                       note.title = titleController.text.toString();
                       note.description = descriptionController.text.toString();
-                      note.save();
-
+                      note.save(); // or box.put(key, note)
                       titleController.clear();
                       descriptionController.clear();
 
